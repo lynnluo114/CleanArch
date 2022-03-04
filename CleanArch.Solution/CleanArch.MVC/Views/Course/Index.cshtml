@@ -1,0 +1,11 @@
+﻿@model CleanArch.Application.ViewModels.CourseViewModel
+
+<div class="container">
+    <div class="row">
+        @foreach (var course in Model.Coursers)
+        {
+            <span>@course.Name</span>
+            <span>@course.Description</span>
+        }
+    </div>
+</div>
