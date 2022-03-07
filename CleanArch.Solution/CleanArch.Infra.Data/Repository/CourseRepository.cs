@@ -9,12 +9,18 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Infra.Data.Repository
 {
-    public class CourseRepository:ICourseRepository
+    public class CourseRepository : ICourseRepository
     {
         private UniversityDBContext _ctx;
         public CourseRepository(UniversityDBContext ctx)
         {
             _ctx = ctx;
+        }
+
+        public void Add(Course course)
+        {
+            _ctx.Add(course);
+            _ctx.SaveChanges();
         }
 
         public IEnumerable<Course> GetCourses()

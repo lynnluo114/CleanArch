@@ -1,4 +1,5 @@
 ﻿using CleanArch.Domain.Core.Bus;
+using CleanArch.Domain.Core.Commands;
 using MediatR;
 using System;
 using System.Collections.Generic;
